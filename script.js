@@ -3,7 +3,7 @@ const fs = require('fs');
 const markDown = require('./Assets/generateMarkdown');
 // TODO: Create an array of questions for user input
 //ask manager details
-inquirer.prompt([ 
+let memberQuestions = inquirer.prompt([ 
     {
         type: 'input', 
         name: 'manager-name',
@@ -105,8 +105,31 @@ inquirer.prompt([
             ])
         }
     }).then({
-        addMember();
-    });    
+        internHTML();
+    }).then({
+
+    })    
+})
+
+function writeToFile(fileName, data) {
+    fs.writeFile('./' + fileName, data, err => {
+        if(err) {
+            return console.error(err) 
+        } else {
+            console.log("Successful writing to " + fileName);
+        }
+
+    })    
 }
+
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(memberQuestions)
+        .then(function(info) {
+            writeToFile("index.html", markDown(info) )
+        })
+    };
+// Function call to initialize app
+init();
 
 
