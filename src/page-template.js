@@ -1,0 +1,118 @@
+const generateTeam = team => {
+
+    const generateManager = manager => {
+        return `
+        
+        <div class="col s4">
+            <div class="card">
+                <h2 class="card-title card-panel blue lighten-2 first-name">${manager.getName()}
+                    <br>
+                    <span class = "icon">☕</span>
+                    <span class = "job-title">Manager</span>
+                </h2>
+            <div class="card-content">
+                <ul class="collapsible">
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>ID:&nbsp; <span class="id">${manager.getID()}</span></div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>E-Mail:&nbsp; <span class="Email">${manager.getEmail()}</span></div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>Office Number:&nbsp; <span class="office-number">${manager.getOfficeNumber()}</span></div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        `;
+    };
+
+    const generateEngineer = engineer => {
+        return `
+        <div class="col s4">
+            <div class="card">
+                <h2 class="card-title card-panel blue lighten-2 first-name">${engineer.getName()}
+                    <br>
+                    <span class = "icon">👓</span>
+                    <span class = "job-title">Engineer</span>
+                </h2>
+            <div class="card-content">
+                <ul class="collapsible">
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>ID:&nbsp; <span class="id">${engineer.getID()}</span></div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>E-Mail:&nbsp; <span class="Email">${engineer.getEmail()}</span></div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>Office Number:&nbsp; <span class="office-number">${engineer.getOfficeNumber()}</span></div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        `;
+    };
+
+    const generateEngineer = intern => {
+        return `
+        <div class="col s4">
+            <div class="card">
+                <h2 class="card-title card-panel blue lighten-2 first-name">${intern.getName()}
+                    <br>
+                    <span class = "icon">🎓</span>
+                    <span class = "job-title">Intern</span>
+                </h2>
+            <div class="card-content">
+                <ul class="collapsible">
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>ID:&nbsp; <span class="id">${intern.getID()}</span></div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>E-Mail:&nbsp; <span class="Email">${intern.getEmail()}</span></div>
+                    </li>
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons"></i>Office Number:&nbsp; <span class="office-number">${intern.getOfficeNumber()}</span></div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        `;
+    };
+
+    const generateHTML = mainPage => {
+        return `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <title>Office Employees</title>
+        </head>
+        <body>
+            <nav>
+                <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">My Team</a>
+                </div>
+            </nav>
+            <div class="row">
+
+
+
+            </div>     
+            </div>     
+        </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        </html>
+
+        
+        `
+    }
+
+}
+
+module.exports = generateHTML;
