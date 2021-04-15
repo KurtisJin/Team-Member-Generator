@@ -1,6 +1,6 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
-const markDown = require('./Assets/generateMarkdown');
+const markDown = require('./src/page-template');
 // TODO: Create an array of questions for user input
 //ask manager details
 inquirer.prompt([ 
