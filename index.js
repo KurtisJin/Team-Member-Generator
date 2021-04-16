@@ -68,7 +68,7 @@ function engineerQuestions() {
         },
     ]).then((answer) => {
 
-        const engineer = new Engineer(answer.engName, answer.engID, answer.engEmail, answer.gitHub);
+        const engineer = new Engineer(answer.engName, answer.engId, answer.engEmail, answer.gitHub);
         employees.push(engineer)//push it to array employees
 
         if(answer.addmembers1 === 'Engineer') {
