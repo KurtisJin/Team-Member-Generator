@@ -1,12 +1,10 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
-// const markDown = require('./src/page-template');
 const Employee = require('../Office-Employees/lib/employee');
 const Manager = require('../Office-Employees/lib/manager');
 const Intern = require('../Office-Employees/lib/intern');
 const Engineer = require('../Office-Employees/lib/engineer')
 const generateHTML = require('./src/page-template');
-// TODO: Create an array of questions for user input
 //ask manager details
 
 const employees = [];//this will store object(s) thats from variable questions
